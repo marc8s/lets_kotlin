@@ -1,17 +1,12 @@
-fun calculaIdade(a: Int, b: Int){
-    println("A idade é ${a-b}")
+class Pessoa(var nome: String, val anoNascimento: Int){
+    fun saudacao(){
+        println("Olá, meu nome é $nome")
+    }
 }
-fun hello(nome: String) : String{
-    return "Olá, $nome"
-}
-
-fun hello2(nome:String) = "Olá, $nome"
 
 fun main(){
-    val anoNascimento = 1992
-    val anoAtual = 2021
-    var nome = "Marcus"
-    calculaIdade(anoAtual, anoNascimento)
-    println(hello(nome))
-    println(hello2(nome))
+    val pessoa: Pessoa = Pessoa(nome = "Marcus", anoNascimento = 1992)
+    println(pessoa.nome)
+    println(pessoa.anoNascimento)
+    pessoa.saudacao()
 }
